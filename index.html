@@ -377,73 +377,6 @@
         </section>
     </main>
 
-    <div class="modal-overlay">
-        <div class="modal">
-
-            <button class="icon-close">
-                <svg width="8" height="8">
-                    <use href="./images/icons.svg#icon-vector-exit"></use>
-                </svg>
-            </button>
-
-            <h2 class="modal-title">Leave your contacts and we will call you back</h2>
-
-            <form class="contact-form">
-
-                <label for="name" class="form-label">Name</label>
-                <div class="input-group">
-                    <span class="icon">
-                        <svg width="18" height="24">
-                            <use href="./images/icons.svg#icon-vector-name"></use>
-                        </svg>
-                    </span>
-                    <input class="form-input" type="text" name="name" id="name" required>
-                </div>
-
-                <label for="tel" class="form-label">Phone</label>
-                    <div class="input-group">
-                        <span class="icon">
-                            <svg width="18" height="24">
-                                <use href="./images/icons.svg#icon-vector-tel"></use>
-                            </svg>
-                        </span>
-                        <input class="form-input" type="tel" name="tel" id="tel" required>
-                    </div>
-                
-
-                <label for="email" class="form-label">Email</label>
-                    <div class="input-group">
-                        <span class="icon">
-                            <svg width="18" height="24">
-                                <use href="./images/icons.svg#icon-vector-mail"></use>
-                            </svg>
-                        </span>
-                        <input class="form-input" type="email" name="email" id="email" required>
-                    </div>
-                
-                <label for="textarea" class="form-label">Comment</label>
-                <div class="input-group">
-                    <textarea class="form-textarea" id="textarea" placeholder="Text input"></textarea>
-                </div>
-
-                <div class="accept-policy">
-                    <label class="policy-text">
-                        <input type="checkbox" name="checkbox" class="visually-hidden-checkbox" required />
-                        <span class="icon-accept-policy">
-                            <svg width="10" height="8">
-                                <use href="./images/icons.svg#icon-vector-accept"></use>
-                            </svg>
-                        </span>
-                        I accept the terms and conditions of the
-                        <a href="#" class="privacy-policy-text">Privacy Policy</a>
-                    </label>
-                </div>
-                
-                <button class="btn-modal btn-modal-primary" type="submit">Send</button>
-            
-        </div>
-    </div>
-
     <footer class="footer">
         <div class="container">
 
@@ -489,7 +422,7 @@
                         </a>
                     </li>
                 </ul>
-                
+
             </div>
 
             <div class="subscribe-container">
@@ -497,7 +430,7 @@
                 
                 <div class="subscribe-content">
                     <form class="subscribe-form">
-                        <input class="subscribe-input" type="email" name="email" id="email" placeholder="E-mail">
+                        <input class="subscribe-input" type="email" name="email" id="email-subscribe" placeholder="E-mail">
                         <button class="btn-subscribe btn-subscribe-primary" type="submit">Subscribe
                             <svg width="24" height="24">
                                 <use href="./images/icons.svg#icon-telegram-1"></use>
@@ -509,5 +442,72 @@
 
         </div>
     </footer>
+
+    <div class="modal-overlay">
+        <div class="modal">
+        
+            <button class="icon-close">
+                <svg width="8" height="8">
+                    <use href="./images/icons.svg#icon-vector-exit"></use>
+                </svg>
+            </button>
+        
+            <h2 class="modal-title">Leave your contacts and we will call you back</h2>
+        
+            <form class="contact-form">
+        
+                <label for="name" class="form-label">Name</label>
+                <div class="input-group">
+                    <span class="icon">
+                        <svg width="18" height="24">
+                            <use href="./images/icons.svg#icon-vector-name"></use>
+                        </svg>
+                    </span>
+                    <input class="form-input" type="text" name="name" id="name" required>
+                </div>
+        
+                <label for="tel" class="form-label">Phone</label>
+                <div class="input-group">
+                    <span class="icon">
+                        <svg width="18" height="24">
+                            <use href="./images/icons.svg#icon-vector-tel"></use>
+                        </svg>
+                    </span>
+                    <input class="form-input" type="tel" name="tel" id="tel" required>
+                </div>
+        
+        
+                <label for="email" class="form-label">Email</label>
+                <div class="input-group">
+                    <span class="icon">
+                        <svg width="18" height="24">
+                            <use href="./images/icons.svg#icon-vector-mail"></use>
+                        </svg>
+                    </span>
+                    <input class="form-input" type="email" name="email" id="email" required>
+                </div>
+        
+                <label for="textarea" class="form-label">Comment</label>
+                <div class="input-group">
+                    <textarea class="form-textarea" id="textarea" placeholder="Text input"></textarea>
+                </div>
+        
+                <div class="accept-policy">
+                    <label class="policy-text">
+                        <input type="checkbox" name="checkbox" class="visually-hidden-checkbox" required />
+                        <span class="icon-accept-policy">
+                            <svg width="10" height="8">
+                                <use href="./images/icons.svg#icon-vector-accept"></use>
+                            </svg>
+                        </span>
+                        I accept the terms and conditions of the
+                        <a href="#" class="privacy-policy-text">Privacy Policy</a>
+                    </label>
+                </div>
+        
+                <button class="btn-modal btn-modal-primary" type="submit">Send</button>
+        
+        </div>
+    </div>
 </body>
 </html>
