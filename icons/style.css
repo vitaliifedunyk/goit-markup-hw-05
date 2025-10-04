@@ -15,6 +15,14 @@ Single-colored icons can be modified like so:
 }
 ========================================== */
 
+.icon-telegram-1 {
+  width: 1.2001953125em;
+}
+
+.icon-vector-accept {
+  width: 1.25em;
+}
+
 .icon-vector-mail {
   width: 1.3330078125em;
 }
