@@ -541,20 +541,18 @@ margin-bottom: 16px;
 }
 
 .subscribe-input {
-    border: 1px solid #fff;
-    border-radius: 4px;
     width: 264px;
     height: 40px;
+    border: 1px solid #fff;
     background-color: transparent;
-    padding-left: 16px !important;
-    color: #fff;
-    font-weight: 400;
     font-size: 12px;
     line-height: 2;
     letter-spacing: 0.04em;
+    padding-left: 16px !important;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    color: #fff;
 }
-
 
 .subscribe-input::placeholder {
     color: #fff;
@@ -584,7 +582,6 @@ margin-bottom: 16px;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    gap: 16px;
 }
 
 .btn-subscribe:hover,
@@ -595,6 +592,10 @@ margin-bottom: 16px;
 
 .btn-subscribe svg {
     fill: #fff;
+}
+
+.footer-subscribe-svg {
+    margin-left: 16px;
 }
 
 
@@ -783,7 +784,8 @@ border: 1px solid #4d5ae5;
     align-items: center;
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.16;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
     color: #8e8f99;
 }
 
@@ -816,10 +818,12 @@ border: 1px solid #4d5ae5;
     height: 16px;
     border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.4);
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     background-color: #fff;
+    fill: transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .user-privacy-checkbox svg {
@@ -830,11 +834,14 @@ border: 1px solid #4d5ae5;
 .visually-hidden-checkbox:checked+.policy-text .user-privacy-checkbox {
     border-radius: 2px;
     background-color: #404bbf;
+    border: none;
+    fill: #f4f4fd;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .visually-hidden-checkbox:checked+.policy-text .user-privacy-checkbox svg {
     opacity: 1;
+    border: none;
     fill: #f4f4fd;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
