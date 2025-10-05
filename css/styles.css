@@ -531,6 +531,7 @@ margin-bottom: 16px;
 
 .subscribe-form {
     display: flex;
+    gap: 24px;
 }
 
 .subscribe-content {
