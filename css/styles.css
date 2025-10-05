@@ -731,7 +731,6 @@ textarea {
     border-radius: 4px;
     padding: 16px 18px;
     padding-left: 38px;
-    font-size: 16px;
 }
 
 .form-textarea {
@@ -768,7 +767,6 @@ border: 1px solid #4d5ae5;
 }
 
 .policy-text {
-    display: flex;
     align-items: center;
     font-weight: 400;
     font-size: 12px;
