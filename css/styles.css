@@ -529,8 +529,11 @@ margin-bottom: 16px;
     align-items: flex-start;
 }
 
-.subscribe-content{
-    flex-direction: row;
+.subscribe-form {
+    display: flex;
+}
+
+.subscribe-content {
     display: flex;
     align-items: center;
     gap: 24px;
@@ -541,21 +544,23 @@ margin-bottom: 16px;
     border-radius: 4px;
     width: 264px;
     height: 40px;
-    background-color: #2e2f42;
+    background-color: transparent;
     padding-left: 16px !important;
     color: #fff;
-}
-
-
-.subscribe-input::placeholder {
     font-weight: 400;
     font-size: 12px;
     line-height: 2;
     letter-spacing: 0.04em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+
+.subscribe-input::placeholder {
     color: #fff;
 }
 
 .btn-subscribe {
+    font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -572,7 +577,7 @@ margin-bottom: 16px;
     border-radius: 4px;
     padding-block: 8px;
     padding-inline: 24px;
-    width: 165px;
+    min-width: 165px;
     height: 40px;
     display: flex;
     align-items: center;
@@ -600,14 +605,14 @@ margin-bottom: 16px;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(46, 47, 66, 0.4);
     z-index: 999;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 1;
     /* pointer-events: none; */
-    transition: opacity 250ms ease-in-out;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* .modal-overlay.is-open {
@@ -615,13 +620,17 @@ margin-bottom: 16px;
     pointer-events: auto;} */
 
 .modal {
-    position: relative;
+    position: absolute;
     background-color: #fcfcfc;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    padding: 24px;
+    padding: 72px 24px 24px;
     width: 408px;
-    height: 584px;
+    min-height: 584px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Close */
@@ -631,6 +640,7 @@ margin-bottom: 16px;
     right: 24px;
     width: 24px;
     height: 24px;
+    padding: 0;
     border-radius: 50%;
     background: #e7e9fc;
     border: 1px solid rgba(0, 0, 0, 0.1); 
@@ -638,9 +648,16 @@ margin-bottom: 16px;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.icon-close svg{
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-close:focus,
 .icon-close:hover{
+    border: none;
     background-color: #404bbf;
     fill: #fff;
 }
@@ -650,35 +667,52 @@ margin-bottom: 16px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
+    text-align: center;
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
-    margin-top: 48px;
+    margin-bottom: 16px;
+}
+
+.form-container {
+    margin-bottom: 8px
+}
+
+.form-container-textarea {
     margin-bottom: 16px;
 }
 
 .contact-form {
     max-width: 360px;
 }
+
 .form-label {
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.16;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
+    display: block;
     margin-bottom: 4px;
 }
 
 .form-input {
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
-    width: 360px;
+    width: 100%;
     height: 40px;
+    background-color: transparent;
+    padding-left: 38px;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus {
+    border-color: #4d5ae5;
 }
 
 .input-group {
     position: relative;
-    margin-bottom: 8px
 }
 
 .input-group .icon {
@@ -686,6 +720,7 @@ margin-bottom: 16px;
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 20px;
     height: 20px;
     display: inline-flex;
@@ -710,30 +745,28 @@ textarea {
 }
 
 .form-textarea {
-    width: 360px;
+    width: 100%;
     height: 120px;
-    box-sizing: border-box;
-    border-radius: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
     border: 1px solid rgba(46, 47, 66, 0.4);
-    font-size: 16px;
+    border-radius: 4px;
     background: transparent;
-    outline: none;
     padding: 8px 16px;
+    outline: transparent;
     resize: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-textarea:focus,
 .form-input:focus {
 border: 1px solid #4d5ae5;
-outline: none;
 }
 
 .form-textarea::placeholder {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.04em;
-    color: rgba(46, 47, 66, 0.4);
     opacity: 1;
 }
 
@@ -741,6 +774,7 @@ outline: none;
 .accept-policy {
     display: flex;
     align-items: center;
+    margin-bottom: 24px;
 }
 
 .policy-text {
@@ -774,7 +808,7 @@ outline: none;
     overflow: hidden;
 }
 
-.icon-accept-policy {
+.user-privacy-checkbox {
     position: relative;
     margin-right: 8px;
     width: 16px;
@@ -787,18 +821,18 @@ outline: none;
     background-color: #fff;
 }
 
-.icon-accept-policy svg {
+.user-privacy-checkbox svg {
     opacity: 0;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.visually-hidden-checkbox:checked+.icon-accept-policy {
+.visually-hidden-checkbox:checked+.policy-text .user-privacy-checkbox {
     border-radius: 2px;
     background-color: #404bbf;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.visually-hidden-checkbox:checked+.icon-accept-policy svg {
+.visually-hidden-checkbox:checked+.policy-text .user-privacy-checkbox svg {
     opacity: 1;
     fill: #f4f4fd;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -818,7 +852,6 @@ outline: none;
 }
 
 .btn-modal-primary {
-    margin-top: 24px;
     padding: 16px 32px;
     border-radius: 4px;
     display: block;
