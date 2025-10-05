@@ -263,20 +263,6 @@ address {
     margin-bottom: 8px;
 }
 
-/* Utilities */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
-
 
 
 /* Team */
@@ -532,6 +518,7 @@ margin-bottom: 16px;
 .subscribe-form {
     display: flex;
     gap: 24px;
+    font-size: 12px;
 }
 
 .subscribe-content {
@@ -866,3 +853,16 @@ border: 1px solid #4d5ae5;
 
 
 
+/* Utilities */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
